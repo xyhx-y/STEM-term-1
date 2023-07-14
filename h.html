@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Radon</title>
+</head>
+<body>
+    
+    <div class="container">
+        <button type="button" class="btn" onclick="openPopup()">Tap to learn about Radon</button>
+        <div class="popup" id="popup">
+<img src="radon.gif">
+<h2>
+    Radon
+</h2>
+<p>Radon is a chemical element with the symbol 'Rn' and atomic number 86. It is a radioactive noble gas that belongs to Group 18 (or 8A) of the periodic table.
+    Radon is a naturally occurring gas produced by the radioactive decay of uranium and thorium in the Earth's crust.It has several isotopes, including radon-222, radon-220, and radon-219. Radon-222 is the most common and stable isotope.
+</p>
+
+<a href="i.html">
+<button type="button" onclick="closePopup()" >Next page</button>
+</a>
+
+        </div>
+    </div>
+    
+    <script>
+let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+
+    </script>
+
+</body>
+</html>

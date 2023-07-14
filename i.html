@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Oganesson</title>
+</head>
+<body>
+    
+    <div class="container">
+        <button type="button" class="btn" onclick="openPopup()">Tap to learn about Oganesson</button>
+        <div class="popup" id="popup">
+<img src="oganesson.jpg">
+<h2>
+    Oganesson
+</h2>
+<p>Oganesson is a synthetic chemical element with the symbol 'Og' and atomic number 118. It is a superheavy element and belongs to Group 18 (or 8A) of the periodic table.
+    Oganesson was first synthesized in 2002 by a team of Russian and American scientists led by Yuri Oganessian at the Joint Institute for Nuclear Research (JINR) in Dubna, Russia. The element was named in his honor.
+    Oganesson is a synthetic element that is not found naturally on Earth.
+</p>
+
+<a href="l.html">
+<button type="button" onclick="closePopup()" >Next page</button>
+</a>
+
+        </div>
+    </div>
+    
+    <script>
+let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+
+    </script>
+
+</body>
+</html>

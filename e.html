@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Argon</title>
+</head>
+<body>
+    
+    <div class="container">
+        <button type="button" class="btn" onclick="openPopup()">Tap to learn about Argon</button>
+        <div class="popup" id="popup">
+<img src="argon.gif">
+<h2>
+    Argon
+</h2>
+<p>Argon is a chemical element with the symbol 'Ar' and atomic number 18. It is a noble gas and belongs to Group 18 (or 8A) of the periodic table.Argon is the third most abundant gas in the Earth's atmosphere.
+    Argon is denser than air and is often used as a shield to exclude oxygen in various industrial processes.
+</p>
+
+<a href="f.html">
+<button type="button" onclick="closePopup()" >Next page</button>
+</a>
+
+        </div>
+    </div>
+    
+    <script>
+let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Xenon</title>
+</head>
+<body>
+    
+    <div class="container">
+        <button type="button" class="btn" onclick="openPopup()">Tap to learn about Xenon</button>
+        <div class="popup" id="popup">
+<img src="xenon.gif">
+<h2>
+    Xenon
+</h2>
+<p>Xenon is a chemical element with the symbol 'Xe' and atomic number 54. It is a noble gas and belongs to Group 18 (or 8A) of the periodic table.It is one of the least abundant gases in the atmosphere.
+    Xenon was discovered in 1898 by Sir William Ramsay and Morris Travers while studying liquefied air. </p>
+
+<a href="h.html">
+<button type="button" onclick="closePopup()" >Next page</button>
+</a>
+
+        </div>
+    </div>
+    
+    <script>
+let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+
+    </script>
+
+</body>
+</html>

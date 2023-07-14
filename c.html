@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Helium Gas</title>
+</head>
+<body>
+
+    <div class="container">
+        <button type="button" class="btn" onclick="openPopup()">Tap to learn about Helium</button>
+        <div class="popup" id="popup">
+<img src="helium.gif">
+<h2>
+    Helium
+</h2>
+<p> Helium is a chemical element with the symbol 'He' and atomic number 2. It is a colorless, odorless and non-toxic gas that belongs to the noble gases group in the periodic table.
+    Helium is the second most abundant element in the universe.It is found under the Earth's crust with other natural gases. 
+</p>
+
+<a href="d.html">
+<button type="button" onclick="closePopup()" >Next page</button>
+</a>
+
+        </div>
+    </div>
+    
+    <script>
+let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+
+    </script>
+</body>
+</html>

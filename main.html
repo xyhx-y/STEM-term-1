@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Periodic Table of Elements, in CSS!</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Main StyleSheet -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'> <!-- Google Fonts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+    <style>
+        /* CSS code here */
+    </style>
+</head>
+
+<body>
+<section>
+    <div id="title">The Elements of Noble Gas</div>
+    <div id="container">
+        <div class="box element">He</div>
+        <div class="box element">Ne</div>
+        <div class="box element">Ar</div>
+        <div class="box element">Kr</div>
+        <div class="box element">Xe</div>
+        <div class="box element">Rn</div>
+        <div class="box element">Og</div>
+    </div>
+</section>
+
+<div id="popup"></div>
+
+<script src="js/jquery.js"></script>
+<script>
+    $(document).ready(function() {
+        const elementsContainer = $('#container');
+        const popup = $('#popup');
+
+        elementsContainer.on('click', '.element', showPopup);
+
+        function showPopup() {
+            const elementSymbol = $(this).text();
+            const elementName = getElementName(elementSymbol); // Replace with your own logic to retrieve element name
+
+            popup.html(`
+                <h2>${elementSymbol}</h2>
+                <p>${elementName}</p>
+            `);
+
+            const rect = this.getBoundingClientRect();
+            const popupTop = rect.top + window.scrollY - popup.outerHeight() - 10;
+            const popupLeft = rect.left + window.scrollX + rect.width / 2 - popup.outerWidth() / 2;
+
+            popup.css({
+                top: `${popupTop}px`,
+                left: `${popupLeft}px`,
+                display: 'block'
+            });
+        }
+
+        function getElementName(symbol) {
+            // Replace with your own logic to retrieve element name based on the symbol
+            return "Element Name";
+        }
+    });
+</script>
+
+</body>
+</html>
